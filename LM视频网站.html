@@ -1,0 +1,266 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>视频网页设计</title>
+<link rel="stylesheet" href="css/Untitled-6.css">
+<link rel="stylesheet" href="css/1111.css">
+<script src="js/Untitled-3.js"></script>
+<script src="js/Untitled-4.js"></script>
+<script src="js/Untitled-5.js"></script>
+<script>
+$(document).ready(function() {
+	$.fn.fullpage({
+		slidesColor: ['#0483f8', '#C2E5FF', '#FDF6E1', '#E9E9E9', '#F3F3F3', '#F9F3DC','#E9E9E9'],
+		anchors: ['page1', 'page2', 'page3', 'page4', 'page5', 'page6','page7'],
+		menu: '#menu',
+		afterRender: function(){
+			$('.screen-main span').each(function(){
+				var $rel = $(this).attr('rel');
+				var $arr = $rel.split(',');
+				$(this).animate({
+					left: $arr[2] + 'px',
+					top: $arr[3] + 'px'
+				}, 500);
+			});
+			$('.inner a').each(function(){
+				var $rel = $(this).attr('rel');
+				var $arr = $rel.split(',');
+				$(this).animate({
+					left: $arr[0] + 'px',
+					top: $arr[1] + 'px'
+				}, 500);
+			});
+		},
+		afterLoad: function(anchorLink, index){
+			if(index == 1){
+				$('.screen-main span').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 2 || index == 3 || index == 4 || index == 5){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[2] + 'px',
+						top: $arr[3] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 6){
+				$('.zanzhu-con a').fadeIn(1000);
+			}
+		},
+		onLeave: function(index, direction){
+			if(index == 1){
+				$('.screen-main span').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 2 || index == 3 || index == 4 || index == 5){
+				$('.inner').eq(index - 2).find('a').each(function(){
+					var $rel = $(this).attr('rel');
+					var $arr = $rel.split(',');
+					$(this).animate({
+						left: $arr[0] + 'px',
+						top: $arr[1] + 'px'
+					}, 500);
+				});
+			}
+			if(index == 6){
+				$('.zanzhu-con a').fadeOut(1000);
+			}
+		}
+	});
+});
+</script>
+</head>
+
+<body>
+
+<ul id="menu">
+	<li data-menuanchor="page1" class="active"><a href="#page1">TOP</a></li>
+	<li data-menuanchor="page2"><a href="#page2">电视剧</a></li>
+	<li data-menuanchor="page3"><a href="#page3">电影</a></li>
+	<li data-menuanchor="page4"><a href="#page4">动漫</a></li>
+	<li data-menuanchor="page5"><a href="#page5">综艺</a></li>
+	<li data-menuanchor="page6"><a href="#page6">合作媒体</a></li>
+    
+</ul>
+
+<div class="section section1">
+<div id="srechBox" align="center">
+  <div class="divcss5-left">
+    <form action="#" method="get">
+    <p class="border-srech">&nbsp;</p>
+    <p class="button-srech"><span class="border-srech">
+      <input type="text" placeholder="电影，电视剧，动漫......"/>
+    </span>
+      <input type="submit" value="搜索"/></p>
+  </div>
+    </form>
+  </div>
+ <div class="t"><img src="图片/logo.jpg" width="50px" height=100%><img src="图片/logo.PNG" width="276" height="50" /></div>
+<div class="q" ><img src="图片/1.jpg" width=100% height=100%>
+</div>
+<div class="p"><img src="图片/2.jpg" width=100% height=100%></div>
+<div class="r"><img src="图片/3.jpg" width=100% height=100%></div>
+<img src="图片/top_2.jpg" width="1180px" height="650px"></div>
+</div>
+
+<div class="section">
+	<div class="science-inner inner">
+		<a class="stiteml st1" href="javascript:void(0)" rel="0,-350,0,7">伪装者</a>
+		<a class="stiteml st2" href="javascript:void(0)" rel="0,-350,0,37">大好时光</a>
+		<a class="stiteml st3" href="javascript:void(0)" rel="0,-350,0,68">琅琊榜</a>
+		<a class="stiteml st4" href="javascript:void(0)" rel="0,-350,0,88">猎场</a>
+		<a class="stiteml st5" href="javascript:void(0)" rel="1010,116,554,116">甄嬛传</a>
+		<a class="stiteml st6" href="javascript:void(0)" rel="1010,146,554,146">致我们单纯的小美好</a>
+		<a class="stiteml st7" href="视频介绍.html" rel="1010,163,554,163">急诊科医生</a>
+		<a class="stiteml st8" href="javascript:void(0)" rel="1010,236,554,236">我的！体育老师</a>
+		<a class="stitemr st9" href="javascript:void(0)" rel="-710,346,290,346">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;独步天下</a>
+		<a class="stitemr st10" href="javascript:void(0)" rel="-710,376,290,376">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;海上牧云记</a>
+		<a class="stitemr st11" href="javascript:void(0)" rel="-710,406,224,406">&nbsp;&nbsp;&nbsp;大话西游之爱你一万年</a>
+		<a class="stitemr st12" href="javascript:void(0)" rel="-710,433,30,433">三生三世十里桃花</a>
+		<a class="stiteml st13" href="javascript:void(0)" rel="761,1050,761,506">外科风云</a>
+		<a class="stiteml st14" href="javascript:void(0)" rel="761,1050,761,523">欢乐颂</a>
+		<a class="stiteml st15" href="javascript:void(0)" rel="761,1050,761,587">人民的名义</a>
+		<a class="stiteml st16" href="javascript:void(0)" rel="761,1050,761,622">好先生</a>
+		<a class="stiteml st17" href="javascript:void(0)" rel="761,1050,761,656">长大</a>
+		<a class="stimg1" href="javascript:void(0)" rel="40,-360,40,143"><img width="200" height="180" src="图片/猎场.jpg"></a>
+		<a class="stimg2" href="javascript:void(0)" rel="1000,30,300,30"><img width="230" height="287" src="图片/急诊科医生.jpg"></a>
+		<a class="stimg3" href="javascript:void(0)" rel="-407,350,433,350"><img width="313" height="215" src="图片/三生三世.jpg"></a>
+		<a class="stimg4" href="javascript:void(0)" rel="761,850,761,350"><img width="200" height="138" src="图片/欢乐颂.jpg"></a>
+	</div>
+</div>
+
+<div class="section">
+	<div class="famous-inner inner">
+		<a class="faitemr fa1" href="javascript:void(0)"  rel="90,-180,90,68">&nbsp;&nbsp;羞羞的铁拳</a>
+		<a class="faitemr fa2" href="javascript:void(0)" rel="90,-180,90,93">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;十二生肖</a>
+		<a class="faitemr fa3" href="javascript:void(0)" rel="0,-180,0,113">正义联盟</a>
+		<a class="faiteml fa4" href="javascript:void(0)" rel="1880,203,435,203">超能陆战队</a>
+		<a class="faiteml fa5" href="javascript:void(0)" rel="1580,227,295,227">疯狂动物城</a>
+		<a class="faiteml fa6" href="javascript:void(0)" rel="1680,290,385,290">雷神3：诸神黄昏</a>
+		<a class="faiteml fa7" href="javascript:void(0)" rel="-300,287,100,287,">喜欢你</a>
+		<a class="faiteml fa8" href="javascript:void(0)" rel="-240,533,99,533">七月与安生</a>
+		<a class="faiteml fa9" href="javascript:void(0)" rel="-240,563,99,563">功夫瑜伽</a>
+		<a class="faiteml fa10" href="javascript:void(0)" rel="-240,593,99,593">你的名字</a>
+		<a class="faiteml fa11" href="javascript:void(0)" rel="1370,383,786,383">战狼2</a>
+		<a class="faiteml fa12" href="javascript:void(0)" rel="1370,450,786,450">霸王别姬</a>
+		<a class="faiteml fa13" href="javascript:void(0)" rel="1370,480,786,480">十面埋伏</a>
+		<a class="faiteml fa14" href="javascript:void(0)" rel="1370,510,786,510">归来</a>
+		<a class="faiteml fa15" href="javascript:void(0)" rel="1370,540,786,540">相爱相亲</a>
+		<a class="faimg1" href="javascript:void(0)" rel="200,-180,200,10"><img width="260" height="190" src="图片/正义联盟.jpg"></a>
+		<a class="faimg2" href="javascript:void(0)" rel="980,77,600,77"><img width="330" height="211" src="图片/疯狂动物城.jpg"></a>
+		<a class="faimg3" href="javascript:void(0)" rel="1280,286,400,316"><img width="300" height="330" src="图片/战狼2.jpg"></a>
+		<a class="faimg4" href="javascript:void(0)" rel="-250,357,109,357"><img width="240" height="166" src="图片/喜欢你.jpg"></a>
+	</div>
+</div>
+<div class="section">
+	<div class="social-inner inner">
+		<a class="soiteml so1" href="javascript:void(0)" rel="450,-175,450,51">龙猫</a>
+		<a class="soiteml so2" href="javascript:void(0)" rel="450,-175,450,110">天空之城</a>
+		<a class="soiteml so3" href="javascript:void(0)" rel="450,-175,450,140">千与千寻</a>
+		<a class="soiteml so4" href="javascript:void(0)" rel="980,228,450,228">哆啦A梦</a>
+		<a class="soiteml so5" href="javascript:void(0)" rel="980,258,450,258">蜡笔小新</a>
+		<a class="soiteml so6" href="javascript:void(0)" rel="980,288,450,288">美少女战士</a>
+		<a class="soiteml so7" href="javascript:void(0)" rel="980,340,450,340">全职法师</a>
+		<a class="soiteml so8" href="javascript:void(0)" rel="980,363,450,363">我是江小白</a>
+		<a class="soiteml so9" href="javascript:void(0)" rel="980,428,450,428">武庚纪</a>
+		<a class="soiteml so10" href="javascript:void(0)" rel="-405,369,162,369">秦时明月2</a>
+		<a class="soiteml so11" href="javascript:void(0)" rel="-405,434,162,434">三国演义</a>
+		<a class="soiteml so12" href="javascript:void(0)" rel="-405,464,162,464">天行九歌</a>
+		<a class="soitemr so13" href="javascript:void(0)" rel="105,850,105,520">画江湖之不良人</a>
+		<a class="soitemr so14" href="javascript:void(0)" rel="376,1050,376,585">地灵曲</a>
+		<a class="soitemr so15" href="javascript:void(0)" rel="376,1050,357,612">斗破苍穹</a>
+		<a class="soimg1" href="javascript:void(0)" rel="156,-175,156,10"><img width="270" height="160" src="图片/龙猫.jpg"></a>
+		<a class="soimg2" href="javascript:void(0)" rel="-405,186,155,186"><img width="270" height="165" src="图片/秦时明月.jpg"></a>
+		<a class="soimg3" href="javascript:void(0)" rel="980,186,675,186"><img width="277" height="166" src="图片/我是江小白.jpg"></a>
+		<a class="soimg4" href="javascript:void(0)" rel="507,850,507,494"><img width="203" height="169" src="图片/不良人.jpg"></a>
+	</div>
+</div>
+
+<div class="section">
+	<div class="net-inner inner">
+		<a class="netitemr net1" href="javascript:void(0)" rel="-10,-310,-10,116">喜剧总动员</a>
+		<a class="netitemr net3" href="javascript:void(0)" rel="0,-240,116">累觉不爱</a>
+		<a class="netitemr net4" href="javascript:void(0)" rel="0,-240,0,146">放开我北鼻</a>
+		<a class="netitemr net5" href="javascript:void(0)" rel="10,-240,10,176">爸爸回来了</a>
+		<a class="netitemr net6" href="javascript:void(0)" rel="20,-240,20,206">超人妈妈</a>
+		<a class="netiteml net7" href="javascript:void(0)" rel="1130,80,535,80">向往的生活</a>
+		<a class="netiteml net8" href="javascript:void(0)" rel="1110,110,515,110">青春旅社</a>
+		<a class="netiteml net9" href="javascript:void(0)" rel="100,260,100,260">爸爸去哪儿</a>
+		<a class="netiteml net10" href="javascript:void(0)"  rel="990,140,495,140">花儿与少年</a>
+		<a class="netiteml net11" a href="javascript:void(0)"  rel="970,170,475,170">偶像来了</a>
+		<a class="netiteml net12" a href="javascript:void(0)"  rel="970,4,499,4">亲爱的客栈</a>
+		
+		<a class="netitemr net14" a href="javascript:void(0)"  rel="-807,321,483,321">快乐大本营</a>
+		<a class="netitemr net15" a href="javascript:void(0)" rel="-335,569,33,569">极限挑战</a>
+		<a class="netitemr net16" a href="javascript:void(0)"  rel="-260,489,-13,489">真正男子汉</a>
+		<a class="netitemr net17" a href="javascript:void(0)"  rel="-250,529,-23,529">奇犬神兵</a>
+		<a class="netiteml net18" a href="javascript:void(0)" style="left: 449px; top: 578px;" rel="699,920,699,458">天天向上</a>
+		<a class="netiteml net19" a href="javascript:void(0)" style="left: 449px; top: 608px;" rel="709,960,709,498">拜托了冰箱</a>
+		<a class="netiteml net20" a href="javascript:void(0)" style="left: 449px; top: 638px;" rel="690,1000,690,538">朗读者</a>
+		<a class="netimg1" a href="javascript:void(0)" rel="195,-228,195,77"><img width="289" height="178" src="图片/爸爸去哪儿.jpg"></a>
+		<a class="netimg2" a href="javascript:void(0)" rel="750,78,759,76"><img width="275" height="280" src="图片/亲爱的客栈.jpg"></a>
+		<a class="netimg3" a href="javascript:void(0)" rel="-435,431,179,431"><img width="240" height="134" src="图片/极限挑战.jpg"></a>
+		<a class="netimg4" a href="javascript:void(0)" rel="480,980,480,397"><img width="320" height="271" src="图片/快乐大本营.jpg"></a>
+	</div>
+</div>
+
+
+<div class="section">
+	<div class="zanzhu">
+		<h2>合作媒体</h2>
+		<div class="zanzhu-con">
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/优酷.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/腾讯.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/爱奇艺.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/乐视.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/新浪.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/土豆.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/搜狐.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/西瓜.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/哔哩哔哩.jpg"></a>
+			<a href="javascript:void(0)"><img width="190" height="76" src="图片/PPTV.jpg"></a>
+		</div>
+		<div class="foot clearfix">
+			<p class="bd">如想投诉，请到<a target="_blank" href="javascript:void(0)">百度百科投诉中心</a>；如想提出意见、建议，请到<a target="_blank" href="javascript:void(0)">意见反馈</a>；想要了解您在百度百科的权利与义务，请查看<a target="_blank" href="javascript:void(0)">权利声明</a>。</p>
+			<p class="ft">&copy;2014Baidu<a target="_blank" href="javascript:void(0)">使用百度前必读</a>|<a target="_blank" href="javascript:void(0)">百科协议</a>|<a target="_blank" href="javascript:void(0)">百度百科合作平台</a></p>
+		</div>
+	</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+<a href="http://www.dowebok.com/" style="display: none;">dowebok</a>
+<a href="http://www.dowebok.com/78.html" style="display: none;">用fullPage.js制作百度百科史记2013效果</a>
+<a href="http://www.dowebok.com/77.html" style="display: none;">jQuery全屏滚动插件fullPage.js</a>
+<script src=" http://hm.baidu.com/h.js?988268596e7a833ffbfb2e9f82d93e18"></script>
+
+</body>
+</html>
